@@ -1,24 +1,40 @@
 schema_version: 1
-id: REPLACE-ME
-name: REPLACE-ME
-slug: replace-me
+id: DEMO-001
+name: Casa Luma
+slug: hospitality-casa-luma
 type: business-demo
-domain: replace-me
+domain: hospitality
 areas:
-  - replace-me
+  - hospitality
+  - direct-booking
+  - conversion-ux
+  - web-development
 status: planning
 visibility: public
 purpose:
   - portfolio
+  - upwork
   - sales-demo
+  - capability-proof
 stack:
-  - replace-me
+  - nextjs
+  - typescript
+  - tailwind
 featured: false
-repository: REPLACE-ME
+repository: https://github.com/AlexiVion/hospitality-casa-luma
 live_demo: null
 owner: AlexiVion
-created: YYYY-MM-DD
-updated: YYYY-MM-DD
+created: 2026-09-13
+updated: 2026-09-13
 topics:
-  - replace-me
-registry: REPLACE-ME
+  - hospitality
+  - hotel
+  - direct-booking
+  - portfolio
+  - concept-project
+registry: https://github.com/VionWorks/portfolio-registry/blob/main/projects/DEMO-001.yaml
+notes: >-
+  Fictional boutique-hotel concept project designed to demonstrate hospitality UX,
+  direct-booking strategy, modern frontend implementation, and booking-engine-ready
+  integration boundaries. It is not paid client work and must not claim unmeasured
+  real-world business results.
