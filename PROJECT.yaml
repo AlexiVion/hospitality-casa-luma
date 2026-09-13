@@ -1,0 +1,24 @@
+schema_version: 1
+id: REPLACE-ME
+name: REPLACE-ME
+slug: replace-me
+type: business-demo
+domain: replace-me
+areas:
+  - replace-me
+status: planning
+visibility: public
+purpose:
+  - portfolio
+  - sales-demo
+stack:
+  - replace-me
+featured: false
+repository: REPLACE-ME
+live_demo: null
+owner: AlexiVion
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+topics:
+  - replace-me
+registry: REPLACE-ME
