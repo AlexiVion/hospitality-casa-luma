@@ -4,13 +4,13 @@
 
 Casa Luma is a fictional boutique-hotel website created as `DEMO-001` in the VionWorks portfolio system. Its purpose is to demonstrate how a hospitality website can combine premium presentation, room discovery, mobile-first UX, and a credible direct-booking journey without pretending to replace a hotel's PMS, channel manager, or booking engine.
 
-> This is a concept project, not paid client work. The hotel, guest content, room inventory, and commercial scenario are fictional. No real-world conversion uplift, booking volume, revenue impact, or production integration is claimed unless it is later measured and documented.
+> This is a concept project, not paid client work. The hotel, guest content, room inventory, rates, and commercial scenario are fictional. No real-world conversion uplift, booking volume, revenue impact, or production integration is claimed unless it is later measured and documented.
 
 ## Project objective
 
 Design and build a polished hospitality website that helps a prospective guest move from discovery to a direct-booking handoff with minimal friction.
 
-The project is intended to demonstrate capability in:
+The project demonstrates capability in:
 
 - hospitality website strategy
 - conversion-oriented UX
@@ -40,43 +40,70 @@ Discovery
   -> External booking-engine handoff in production
 ```
 
-The demo will represent the full UX up to the integration boundary. It will not implement real inventory, payments, PMS synchronization, or channel management.
+The demo represents the full UX up to the integration boundary. It does not implement real inventory, payments, PMS synchronization, or channel management.
 
-## Planned pages
+## Implemented pages
 
 - Home
 - Rooms
 - Individual room detail
-- Experiences / location
+- Experiences
 - About
 - Contact
 - Booking / availability demo
+- Booking-engine handoff state
+- Not-found state
 
-## Planned stack
+## Implemented stack
 
-- Next.js
+- Next.js 16
+- React 19
 - TypeScript
-- Tailwind CSS
-- Vercel
-- Static / mocked hospitality content during the demo phase
+- Tailwind CSS 4
+- Static / deterministic mocked hospitality content
+- GitHub Actions production-build verification
+- Vercel-ready deployment structure
 
-The implementation should remain simple enough to inspect and credible enough to deploy, while keeping business-system integrations replaceable.
+The implementation intentionally stays simple enough to inspect while keeping the external booking-engine boundary replaceable.
+
+## Booking demo behavior
+
+The booking flow is deterministic so it can be tested and screenshotted reliably.
+
+- date and guest inputs are carried through URL query parameters
+- rooms are filtered by guest capacity
+- fictional rates are clearly labeled
+- arrivals on the 17th intentionally trigger a no-availability state for QA
+- `Book direct` ends at an explicit integration-handoff screen rather than faking a payment or reservation
 
 ## Documentation
 
-The project is designed before it is coded.
+The project was designed before implementation.
 
 - [`docs/BRIEF.md`](docs/BRIEF.md) — business context, scope, non-goals, and success criteria
 - [`docs/UX.md`](docs/UX.md) — booking journey, conversion logic, trust, and mobile behavior
 - [`docs/VISUAL-DIRECTION.md`](docs/VISUAL-DIRECTION.md) — positioning, typography, color, imagery, and UI language
 - [`docs/IMPLEMENTATION.md`](docs/IMPLEMENTATION.md) — technical architecture, routes, components, data, and integration boundaries
-- [`docs/CASE-STUDY.md`](docs/CASE-STUDY.md) — portfolio narrative, completed only with verifiable evidence
+- [`docs/CASE-STUDY.md`](docs/CASE-STUDY.md) — portfolio narrative, finalized only with verifiable evidence
 
 ## Project status
 
-`planning`
+`building`
 
-The planning phase is complete when the brief, UX strategy, visual direction, and implementation boundaries are stable enough that coding can proceed without repeatedly redefining the product.
+The first functional site version is implemented and passes the repository's production build workflow. Remaining work before `qa` / `published` includes visual review in-browser, responsive QA, deployment, screenshot production, and final case-study evidence.
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+Production build:
+
+```bash
+npm run build
+```
 
 ## Registry
 
